@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="monkey_1" translatesAutoresizingMaskIntoConstraints="NO" id="DID-ft-ng7">
+                                <rect key="frame" x="27" y="40" width="74" height="91"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="PiG-Pm-PvG" appends="YES" id="wCW-qr-pCj"/>
+                                    <outletCollection property="gestureRecognizers" destination="ZMe-UT-SUW" appends="YES" id="Wh4-hb-0hJ"/>
+                                    <outletCollection property="gestureRecognizers" destination="OLT-Kk-lZR" appends="YES" id="kv5-aP-J2Z"/>
+                                </connections>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="monkey_1" translatesAutoresizingMaskIntoConstraints="NO" id="Pij-hu-9Xx">
+                                <rect key="frame" x="151" y="20" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view alpha="0.10000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jiI-n9-4gJ">
+                                <rect key="frame" x="0.0" y="568" width="320" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nwj-EY-lJu">
+                                        <rect key="frame" x="145" y="0.0" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="X">
+                                            <color key="titleColor" red="0.34255521779999998" green="1" blue="0.28692595319999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" red="0.23921568630000001" green="0.71372549019999998" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="door_bottom.png" translatesAutoresizingMaskIntoConstraints="NO" id="yW0-Wg-WS3">
+                                <rect key="frame" x="0.0" y="230" width="320" height="338"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="door_top.png" translatesAutoresizingMaskIntoConstraints="NO" id="BEe-eq-kGP">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="287"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="bananaImg" destination="Pij-hu-9Xx" id="g6K-ij-KNT"/>
+                        <outlet property="bottom_img" destination="yW0-Wg-WS3" id="MRm-W5-Fdj"/>
+                        <outlet property="deleteView" destination="jiI-n9-4gJ" id="Zl4-WF-nCF"/>
+                        <outlet property="top_img" destination="BEe-eq-kGP" id="Hm6-fd-M9y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="PiG-Pm-PvG">
+                    <connections>
+                        <action selector="handlePan:" destination="vXZ-lx-hvc" id="GpS-eO-g6D"/>
+                        <outlet property="delegate" destination="vXZ-lx-hvc" id="2CX-JC-TmP"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pinchGestureRecognizer id="ZMe-UT-SUW">
+                    <connections>
+                        <action selector="handlePinch:" destination="vXZ-lx-hvc" id="U6C-dc-8hD"/>
+                        <outlet property="delegate" destination="vXZ-lx-hvc" id="4Qo-QJ-CHx"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <rotationGestureRecognizer id="OLT-Kk-lZR">
+                    <connections>
+                        <action selector="handleRotate:" destination="vXZ-lx-hvc" id="NmT-nt-8RK"/>
+                        <outlet property="delegate" destination="vXZ-lx-hvc" id="8zv-AD-5Je"/>
+                    </connections>
+                </rotationGestureRecognizer>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="door_bottom.png" width="320" height="235"/>
+        <image name="door_top.png" width="320" height="266"/>
+        <image name="monkey_1" width="140" height="168"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

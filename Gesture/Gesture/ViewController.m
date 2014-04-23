@@ -47,6 +47,7 @@
        _top_img.frame = CGRectMake(0, 0, 320, 0);
    }];
     
+     
     _bottom_img.frame = CGRectMake(0, 230, 320, 338);
     [UIView animateWithDuration:2.0 animations:^{
         _bottom_img.frame = CGRectMake(0, 568, 320, 0);
